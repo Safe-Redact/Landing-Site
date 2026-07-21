@@ -67,8 +67,8 @@ function Validation() {
                 <span className="mt-2 text-caption font-bold text-accent/80">Layer {layer.number}</span>
               </div>
               <div className="flex-1 p-6 sm:p-8">
-                <h3 className="mb-3 text-heading-xl font-semibold text-white">{layer.title}</h3>
-                <p className="text-body-lg leading-relaxed text-white/60">{layer.description}</p>
+                <h3 className="mb-3 text-heading-lg font-semibold text-white">{layer.title}</h3>
+                <p className="text-body leading-relaxed text-white/60">{layer.description}</p>
               </div>
               {i < layers.length - 1 && (
                 <div className="absolute bottom-0 left-1/2 h-6 w-px bg-gradient-to-b from-accent/30 to-transparent" aria-hidden="true" />

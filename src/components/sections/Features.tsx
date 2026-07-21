@@ -45,7 +45,7 @@ function Features() {
                 {iconMap[pillar.icon]}
               </div>
               <div className="mb-1 text-body-sm font-medium uppercase tracking-wider text-accent">{pillar.subtitle}</div>
-              <h3 className="mb-3 text-heading-xl font-semibold text-primary-800">{pillar.title}</h3>
+              <h3 className="mb-3 text-heading-lg font-semibold text-primary-800">{pillar.title}</h3>
               <p className="mb-6 text-body leading-relaxed text-primary-500">{pillar.description}</p>
               <ul className="space-y-2.5">
                 {pillar.features.map((feature) => (

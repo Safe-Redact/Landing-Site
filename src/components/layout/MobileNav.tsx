@@ -72,25 +72,28 @@ function MobileNav({ open, onClose }: MobileNavProps) {
 
         <div className="flex flex-col gap-1">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={onClose}
               className="rounded-control px-4 py-3 text-body font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="mt-8 border-t border-white/10 pt-6">
-          <a
-            href="#waitlist"
+          <Link
+            href="/download"
             onClick={onClose}
-            className="flex w-full items-center justify-center rounded-control bg-accent px-6 py-3 text-body font-medium text-white transition-colors hover:bg-accent-dark"
+            className="flex w-full items-center justify-center gap-2 rounded-control bg-accent px-6 py-3 text-body font-medium text-white transition-colors hover:bg-accent-dark"
           >
-            Join Waitlist
-          </a>
+            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+            </svg>
+            Download
+          </Link>
         </div>
       </nav>
     </div>

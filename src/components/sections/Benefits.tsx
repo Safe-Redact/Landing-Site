@@ -65,9 +65,9 @@ function Benefits() {
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-accent-100 to-accent-50 transition-transform duration-300 group-hover:scale-110 sm:h-14 sm:w-14">
                   {iconMap[iconKeys[i]]}
                 </div>
-                <h3 className="text-heading-lg font-semibold text-primary-800 sm:text-heading-xl">{benefit.title}</h3>
+                <h3 className="text-heading font-semibold text-primary-800 sm:text-heading-lg">{benefit.title}</h3>
               </div>
-              <p className="text-body-lg leading-relaxed text-primary-500 sm:text-body-xl">{benefit.description}</p>
+              <p className="text-body leading-relaxed text-primary-500 sm:text-body-lg">{benefit.description}</p>
             </div>
           </AnimateOnScroll>
         ))}

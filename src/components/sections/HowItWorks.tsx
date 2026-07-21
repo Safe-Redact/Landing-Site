@@ -30,8 +30,8 @@ function HowItWorks() {
                   </div>
                 </div>
                 <div className="flex-1 pt-2">
-                  <h3 className="mb-3 text-heading-xl font-semibold text-primary-800">{step.title}</h3>
-                  <p className="text-body-xl leading-relaxed text-primary-500">{step.description}</p>
+                  <h3 className="mb-2 text-heading-lg font-semibold text-primary-800">{step.title}</h3>
+                  <p className="text-body leading-relaxed text-primary-500">{step.description}</p>
                 </div>
               </div>
             </AnimateOnScroll>

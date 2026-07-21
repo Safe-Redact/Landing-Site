@@ -20,7 +20,7 @@ function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-primary-800/95 shadow-lg backdrop-blur-md" : "bg-transparent",
+        scrolled ? "bg-primary-800/95 shadow-lg backdrop-blur-md" : "bg-primary-800",
       )}
     >
       <a href="#main-content" className="skip-link">
@@ -38,23 +38,26 @@ function Header() {
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main navigation">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-body-sm font-medium text-white/80 transition-colors hover:text-white"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <a
-            href="#waitlist"
-            className="inline-flex items-center justify-center gap-2 rounded-control border border-white/30 bg-transparent px-4 py-2 text-body-sm font-medium text-white transition-all duration-200 hover:border-white/50 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+          <Link
+            href="/download"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-control bg-accent px-5 py-2.5 text-body-sm font-medium text-white shadow-sm transition-all duration-200 hover:bg-accent-dark hover:shadow-md"
           >
-            Join Waitlist
-          </a>
+            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+            </svg>
+            Download
+          </Link>
         </div>
 
         <button

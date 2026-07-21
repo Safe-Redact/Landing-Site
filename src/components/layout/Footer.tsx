@@ -3,19 +3,21 @@ import { siteConfig } from "@/content/site";
 
 const footerLinks = {
   product: [
-    { label: "Features", href: "#features" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Benefits", href: "#benefits" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Features", href: "/features" },
+    { label: "How It Works", href: "/how-it-works" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Download", href: "/download" },
   ],
   resources: [
-    { label: "GitHub", href: "https://github.com" },
-    { label: "Documentation", href: "#" },
-    { label: "Architecture", href: "#" },
+    { label: "Documentation", href: "/docs" },
+    { label: "Blog", href: "/blog" },
+    { label: "GitHub", href: "https://github.com/Safe-Redact/Redact" },
+    { label: "FAQ", href: "/#faq" },
   ],
   legal: [
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Use", href: "#" },
+    { label: "License (MIT)", href: "https://github.com/Safe-Redact/Redact/blob/main/LICENSE" },
   ],
 };
 
@@ -40,10 +42,10 @@ function Footer() {
             <h4 className="mb-4 text-body-sm font-semibold uppercase tracking-wider text-white/40">Product</h4>
             <ul className="flex flex-col gap-2.5">
               {footerLinks.product.map((link) => (
-                <li key={`product-${link.label}`}>
-                  <a href={link.href} className="text-body-sm text-white/70 transition-colors hover:text-white">
+                <li key={link.label}>
+                  <Link href={link.href} className="text-body-sm text-white/70 transition-colors hover:text-white">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -53,7 +55,7 @@ function Footer() {
             <h4 className="mb-4 text-body-sm font-semibold uppercase tracking-wider text-white/40">Resources</h4>
             <ul className="flex flex-col gap-2.5">
               {footerLinks.resources.map((link) => (
-                <li key={`resources-${link.label}`}>
+                <li key={link.label}>
                   <a
                     href={link.href}
                     target={link.href.startsWith("http") ? "_blank" : undefined}
@@ -71,7 +73,7 @@ function Footer() {
             <h4 className="mb-4 text-body-sm font-semibold uppercase tracking-wider text-white/40">Legal</h4>
             <ul className="flex flex-col gap-2.5">
               {footerLinks.legal.map((link) => (
-                <li key={`legal-${link.label}`}>
+                <li key={link.label}>
                   <a href={link.href} className="text-body-sm text-white/70 transition-colors hover:text-white">
                     {link.label}
                   </a>
