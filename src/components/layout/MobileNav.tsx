@@ -1,4 +1,5 @@
 "use client";
+import { WINDOWS_INSTALLER_URL } from "@/lib/downloads";
 
 import { useEffect } from "react";
 import Link from "next/link";
@@ -84,8 +85,8 @@ function MobileNav({ open, onClose }: MobileNavProps) {
         </div>
 
         <div className="mt-8 border-t border-white/10 pt-6">
-          <Link
-            href="/download"
+          <a
+            href={WINDOWS_INSTALLER_URL}
             onClick={onClose}
             className="flex w-full items-center justify-center gap-2 rounded-control bg-accent px-6 py-3 text-body font-medium text-white transition-colors hover:bg-accent-dark"
           >
@@ -93,7 +94,7 @@ function MobileNav({ open, onClose }: MobileNavProps) {
               <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
             </svg>
             Download
-          </Link>
+          </a>
         </div>
       </nav>
     </div>
