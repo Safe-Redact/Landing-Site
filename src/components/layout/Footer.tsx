@@ -1,3 +1,4 @@
+import { WINDOWS_INSTALLER_URL } from "@/lib/downloads";
 import Link from "next/link";
 import { siteConfig } from "@/content/site";
 
@@ -6,7 +7,7 @@ const footerLinks = {
     { label: "Features", href: "/features" },
     { label: "How It Works", href: "/how-it-works" },
     { label: "Pricing", href: "/pricing" },
-    { label: "Download", href: "/download" },
+    { label: "Download", href: WINDOWS_INSTALLER_URL },
   ],
   resources: [
     { label: "Documentation", href: "/docs" },

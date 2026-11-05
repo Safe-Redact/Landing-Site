@@ -11,7 +11,7 @@ function Hero() {
       <div className="relative mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <Badge variant="accent" className="mb-6 animate-on-scroll is-visible">
-            Free &amp; Open Source
+            Local processing
           </Badge>
 
           <h1
@@ -31,7 +31,7 @@ function Hero() {
             className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-on-scroll is-visible"
             style={{ animationDelay: "300ms" }}
           >
-            <Link
+            <a
               href={heroContent.primaryCta.href}
               className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-control bg-accent px-8 py-4 text-body-lg font-medium text-white shadow-lg shadow-accent/25 transition-all duration-200 hover:bg-accent-dark hover:shadow-xl hover:shadow-accent/30"
             >
@@ -39,7 +39,7 @@ function Hero() {
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
               </svg>
               {heroContent.primaryCta.label}
-            </Link>
+            </a>
             <a
               href={heroContent.secondaryCta.href}
               target="_blank"

@@ -1,3 +1,4 @@
+import { WINDOWS_INSTALLER_URL } from "@/lib/downloads";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { steps } from "@/content/how-it-works";
@@ -36,15 +37,15 @@ export default function HowItWorksPage() {
         </div>
 
         <div className="mt-16 text-center">
-          <Link
-            href="/download"
+          <a
+            href={WINDOWS_INSTALLER_URL}
             className="inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-control bg-accent px-8 py-4 text-body-lg font-medium text-white shadow-lg shadow-accent/25 transition-all duration-200 hover:bg-accent-dark hover:shadow-xl hover:shadow-accent/30"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
             </svg>
             Try It Yourself
-          </Link>
+          </a>
         </div>
       </div>
     </section>

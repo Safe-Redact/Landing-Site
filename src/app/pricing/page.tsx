@@ -1,3 +1,4 @@
+import { WINDOWS_INSTALLER_URL } from "@/lib/downloads";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ const tiers = [
       "Unlimited projects",
       "Community support via GitHub",
     ],
-    cta: { label: "Download Free", href: "/download" },
+    cta: { label: "Download installer", href: WINDOWS_INSTALLER_URL },
     highlighted: true,
   },
   {
